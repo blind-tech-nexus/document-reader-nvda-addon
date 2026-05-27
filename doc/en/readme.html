@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVDA PDF Reader Add-on – Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #222;
+        }
+        h1, h2, h3, h4 {
+            color: #003366;
+        }
+        h1 {
+            border-bottom: 3px solid #003366;
+            padding-bottom: 8px;
+        }
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        h3 {
+            margin-top: 25px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #dcdcdc;
+            padding: 12px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .shortcut-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        .shortcut-table th, .shortcut-table td {
+            border: 1px solid #aaa;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .shortcut-table th {
+            background-color: #e0e0e0;
+        }
+        .note {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>NVDA PDF Reader Add-on – Documentation</h1>
+    <p><strong>Version 0.1.0</strong></p>
+    <p>The PDF Reader add-on transforms NVDA into a comprehensive PDF reading and management environment, built with accessibility as its core foundation. It provides blind and visually impaired users with powerful tools for text extraction, navigation, annotation, optical character recognition, high-quality speech, and document manipulation — all through an intuitive dialog interface and extensive keyboard shortcuts.</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Feature List</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#reader-panel">The PDF Reader Panel</a></li>
+        <li><a href="#menus">Menu Reference</a></li>
+        <li><a href="#ocr">Optical Character Recognition (OCR)</a></li>
+        <li><a href="#tts">Text‑to‑Speech and Reading Aloud</a></li>
+        <li><a href="#export">Exporting Documents</a></li>
+        <li><a href="#settings">Settings Dialog</a></li>
+        <li><a href="#shortcuts">Keyboard Shortcuts</a></li>
+        <li><a href="#requirements">System Requirements</a></li>
+        <li><a href="#support">Support and Community</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+    </ol>
+
+    <h2 id="overview">Overview</h2>
+    <p>The PDF Reader add-on turns NVDA into a full-featured PDF workstation. It opens standard PDF files (including password-protected ones), extracts text in multiple reading modes, and allows you to navigate, search, bookmark, annotate, and export documents. Integrated OCR enables reading of scanned/image-based PDFs, while Microsoft Edge TTS voices provide natural‑sounding read-aloud functionality. Document manipulation tools let you rotate, delete, merge, split, and watermark pages, redact sensitive text, and extract embedded images.</p>
+    <p>All actions are reachable via clearly labeled buttons, context menus, and customizable keyboard shortcuts. A menu navigator (Ctrl+Shift+M) offers quick access to every menu from within the text area. Reading progress, bookmarks, notes, and settings are automatically saved and restored across sessions.</p>
+
+    <h2 id="features">Feature List</h2>
+    <ul>
+        <li><strong>Multi‑format PDF import</strong> – open PDF files, including password‑protected ones, from the file dialog or from a list of recently used files.</li>
+        <li><strong>Five text extraction modes</strong> – Blocks, Text, Words, HTML, and Structured – to adapt to different document layouts.</li>
+        <li><strong>Extraction profiles</strong> – Default, Simple, Detailed, OCR Only, and Clean profiles that filter and format extracted text.</li>
+        <li><strong>Built‑in OCR (Tesseract)</strong> – scan image‑based pages with automatic detection of Tesseract installations; manual browse fallback if needed.</li>
+        <li><strong>Text‑to‑speech with Edge TTS</strong> – read current page aloud using neural voices; full control over voice, speed, pitch, and volume; voice preview.</li>
+        <li><strong>Audiobook generation</strong> – export pages or entire document as MP3 files with selected TTS settings.</li>
+        <li><strong>Advanced search</strong> – search across all pages or within the current page; supports case sensitivity, whole words, regular expressions, and search history.</li>
+        <li><strong>Find and replace</strong> – replace occurrences on the current page directly inside the PDF, preserving document layout.</li>
+        <li><strong>Bookmark manager</strong> – add, rename, delete, jump to, and export bookmarks with custom titles.</li>
+        <li><strong>Note taking</strong> – attach multi‑line notes to any page.</li>
+        <li><strong>Table of contents navigation</strong> – browse the document outline in a tree view and jump to any section.</li>
+        <li><strong>Multi‑format export</strong> – export to TXT, DOCX, HTML, JSON, CSV (tables), and MP3 audiobook, with optional inclusion of notes and OCR text.</li>
+        <li><strong>Document manipulation</strong> – rotate pages, delete pages, extract page ranges, merge PDFs, split into single pages, extract images, save page as image, add text watermarks, redact sensitive text.</li>
+        <li><strong>Text annotations</strong> – add visible text annotations to PDF pages and save a new annotated copy.</li>
+        <li><strong>Password protection</strong> – encrypt PDF with AES‑256 and a user‑defined password.</li>
+        <li><strong>Visual customization</strong> – high contrast, colour inversion, dark mode, adjustable font size and zoom level.</li>
+        <li><strong>Split view</strong> – display two consecutive pages side by side for comparison.</li>
+        <li><strong>Auto‑scroll</strong> – automatically advance pages at a configurable speed.</li>
+        <li><strong>Document statistics</strong> – total words, characters, images, links, and per‑page averages.</li>
+        <li><strong>Page comparison</strong> – compare word/character counts across multiple specified pages.</li>
+        <li><strong>Link extraction</strong> – collect and save all hyperlinks from the document.</li>
+        <li><strong>Text translation</strong> – translate the current page content via Google Translate.</li>
+        <li><strong>Reading history</strong> – automatic resume prompt and persistent progress tracking.</li>
+        <li><strong>Recent files list</strong> – quick access to up to 15 previously opened PDFs.</li>
+        <li><strong>Menu navigator</strong> – (Ctrl+Shift+M) opens a list of all menus for rapid access.</li>
+        <li><strong>Metadata viewer</strong> – display and copy PDF document properties.</li>
+        <li><strong>Persistent settings</strong> – all preferences saved in a local JSON file.</li>
+        <li><strong>Accessible dialogs</strong> – all controls are labelled and reachable via keyboard; progress dialogs provide real‑time status updates.</li>
+    </ul>
+
+    <h2 id="installation">Installation</h2>
+    <ol>
+        <li>Download the <code>.nvda-addon</code> file for the PDF Reader.</li>
+        <li>Open NVDA (if not already running) by pressing <code>Control+Alt+N</code> or using the Start menu.</li>
+        <li>Open the NVDA menu with <code>NVDA+N</code>, go to <strong>Tools</strong>, and select <strong>Manage Add‑ons</strong>.</li>
+        <li>In the Add‑ons Manager, press the <strong>Install</strong> button.</li>
+        <li>Browse to the downloaded add‑on file, select it, and press Enter.</li>
+        <li>Review the confirmation and choose <strong>Yes</strong> to install. NVDA will ask to restart; press Enter to restart.</li>
+        <li>After restart, the add‑on is ready. Access it via <code>NVDA+Alt+P</code> or the <strong>Tools</strong> menu.</li>
+    </ol>
+
+    <h2 id="getting-started">Getting Started</h2>
+    <p>Press <code>NVDA+Alt+P</code> to open the main PDF Reader dialog. From there you can import a PDF, resume the last file, or pick from recent files. Alternatively, use the NVDA <strong>Tools</strong> menu and select <strong>PDF Reader</strong>.</p>
+    <p>Once a PDF is opened, the <strong>PDF Reader Panel</strong> appears, showing the document content and a set of toolbars and buttons. The panel can be closed with <code>Ctrl+W</code>, Escape, or the <strong>Close Reader Panel</strong> button.</p>
+
+    <h2 id="reader-panel">The PDF Reader Panel</h2>
+    <p>This is the main working area. It contains:</p>
+    <ul>
+        <li><strong>Toolbar buttons</strong> – File, Edit, View, Tools, Navigate, Manipulations, Settings, Help. Each opens a dropdown menu.</li>
+        <li><strong>Information bar</strong> – shows current page / total pages, and a <em>Reading Mode</em> dropdown.</li>
+        <li><strong>Text display area</strong> – read‑only text box showing extracted content. You can select text, navigate, and use standard review commands.</li>
+        <li><strong>Navigation row</strong> – Prev / Next buttons, a page number dropdown, and a Go button to jump to a specific page.</li>
+        <li><strong>Action buttons</strong> – quick access to Search, Bookmark, TOC, OCR, Export, Note, and Read (aloud).</li>
+        <li><strong>Status bar</strong> – reading mode, zoom level, cursor position, and text length.</li>
+    </ul>
+    <p>Within the text area, you can press <code>Ctrl+Shift+M</code> to open the Menu Navigator – a list of all menus and Settings for immediate access.</p>
+
+    <h2 id="menus">Menu Reference</h2>
+
+    <h3>File Menu</h3>
+    <ul>
+        <li><strong>Import PDF (Ctrl+I)</strong> – open another PDF, closing the current one.</li>
+        <li><strong>Export (Ctrl+Shift+E)</strong> – open the export dialog.</li>
+        <li><strong>Properties (Ctrl+M)</strong> – view document metadata (title, author, page count, file size, etc.).</li>
+        <li><strong>Protect PDF</strong> – add a password and save an encrypted copy.</li>
+        <li><strong>Close (Ctrl+W)</strong> – close the reader panel.</li>
+    </ul>
+
+    <h3>Edit Menu</h3>
+    <ul>
+        <li><strong>Find (Ctrl+F)</strong> – open search dialog with options.</li>
+        <li><strong>Find Next (F3)</strong> – jump to the next search result.</li>
+        <li><strong>Find Previous (Shift+F3)</strong> – jump to the previous result.</li>
+        <li><strong>Find and Replace</strong> – enter find/replace text; replacements are performed directly on the current page by redacting the old text and inserting the new text in its place.</li>
+        <li><strong>Copy Page Text (Ctrl+C)</strong> – copy the current page text (or selection) to clipboard.</li>
+        <li><strong>Copy All Text (Ctrl+Shift+C)</strong> – copy text from all pages.</li>
+        <li><strong>Highlight Selection (Ctrl+Shift+L)</strong> – add a highlight annotation for selected text on the current page.</li>
+    </ul>
+
+    <h3>View Menu</h3>
+    <ul>
+        <li><strong>Zoom In (Ctrl+Plus)</strong> / <strong>Zoom Out (Ctrl+Minus)</strong> / <strong>Reset Zoom (Ctrl+0)</strong> – adjust text size.</li>
+        <li><strong>High Contrast (Ctrl+H)</strong> – toggle uppercase display.</li>
+        <li><strong>Invert Colors (Ctrl+Shift+I)</strong> – reverse text order.</li>
+        <li><strong>Dark Mode</strong> – toggle dark background with light text.</li>
+        <li><strong>Split View (Ctrl+Shift+V)</strong> – show a second panel with the next page.</li>
+    </ul>
+
+    <h3>Tools Menu</h3>
+    <ul>
+        <li><strong>OCR (Ctrl+Shift+O)</strong> – run optical character recognition.</li>
+        <li><strong>Extraction Profile (Ctrl+Shift+P)</strong> – switch between text processing profiles.</li>
+        <li><strong>Read Aloud (Ctrl+R)</strong> – start/stop page reading.</li>
+        <li><strong>Auto Scroll (Ctrl+Shift+A)</strong> – automatic page turning.</li>
+        <li><strong>Compare Pages (Ctrl+Shift+C)</strong> – compare word/char counts for specified pages.</li>
+        <li><strong>Statistics (Ctrl+Shift+S)</strong> – show document statistics dialog.</li>
+        <li><strong>Translate Page (Ctrl+Shift+T)</strong> – translate current page to another language.</li>
+        <li><strong>Extract Links</strong> – save all links to a text file.</li>
+        <li><strong>Voice Preview</strong> – play a short TTS sample with current settings.</li>
+        <li><strong>Redact Text</strong> – permanently remove all occurrences of a given text from the whole document.</li>
+    </ul>
+
+    <h3>Navigate Menu</h3>
+    <ul>
+        <li><strong>Bookmarks (Ctrl+B)</strong> – add a bookmark.</li>
+        <li><strong>Bookmarks Manager (Ctrl+Shift+B)</strong> – open the bookmark list for editing, jumping, exporting.</li>
+        <li><strong>Export Bookmarks</strong> – save bookmarks to a text file.</li>
+        <li><strong>Table of Contents (Ctrl+T)</strong> – open structured TOC tree.</li>
+        <li><strong>Annotations (Ctrl+Shift+N)</strong> – view saved annotations.</li>
+        <li><strong>Highlights (Ctrl+Shift+H)</strong> – view highlights.</li>
+        <li><strong>Go To Page (Ctrl+G)</strong> – type a page number.</li>
+        <li><strong>Previous Page (Alt+PageUp)</strong> / <strong>Next Page (Alt+PageDown)</strong>.</li>
+    </ul>
+
+    <h3>Manipulations Menu</h3>
+    <ul>
+        <li><strong>Add Annotation</strong> – opens a dialog with an <em>Add</em> and <em>Cancel</em> button; the text annotation is placed on the current page and the document is saved as a new PDF.</li>
+        <li><strong>Rotate Page Clockwise / Counterclockwise</strong> – rotate the current page 90 degrees.</li>
+        <li><strong>Delete Current Page</strong> – remove the page (with confirmation).</li>
+        <li><strong>Extract Pages</strong> – create a new PDF from a page range.</li>
+        <li><strong>Merge PDF</strong> – combine another PDF into the current document.</li>
+        <li><strong>Split PDF</strong> – save each page as a separate PDF file.</li>
+        <li><strong>Extract Images</strong> – save all embedded images to a folder.</li>
+        <li><strong>Save Page as Image</strong> – render the current page as a high‑resolution PNG.</li>
+        <li><strong>Add Watermark</strong> – apply a diagonal text watermark to all pages.</li>
+    </ul>
+
+    <h2 id="ocr">Optical Character Recognition (OCR)</h2>
+    <p>When a PDF contains scanned images, use OCR to extract readable text:</p>
+    <ol>
+        <li>Press <code>Ctrl+Shift+O</code> or the OCR button.</li>
+        <li>Choose <strong>Current page</strong>, <strong>All pages</strong>, or a <strong>Page range</strong> (enter start/end).</li>
+        <li>Press Start. The add‑on first looks for Tesseract in standard installation paths (<code>C:\Program Files\Tesseract-OCR\tesseract.exe</code> and <code>C:\Program Files (x86)\Tesseract-OCR\tesseract.exe</code>). If not found, you will be prompted to locate the executable manually.</li>
+        <li>A progress dialog shows the OCR status. Results are cached; re‑running OCR on the same page uses the cache.</li>
+        <li>After processing, the extraction profile automatically switches to <em>OCR Only</em>, displaying the recognised text. You can later switch back to other profiles.</li>
+    </ol>
+
+    <h2 id="tts">Text‑to‑Speech and Reading Aloud</h2>
+    <p>The add‑on uses Microsoft Edge TTS for high‑quality speech. Configure it in the Settings dialog (<em>Text‑to‑Speech</em> tab):</p>
+    <ul>
+        <li><strong>Voice</strong> – choose from a list. Press <em>Fetch Latest Voices</em> to retrieve the full catalogue from Microsoft servers; the list is saved locally.</li>
+        <li><strong>Speed</strong> – from –50% to +50%.</li>
+        <li><strong>Pitch</strong> – from –20Hz to +20Hz.</li>
+        <li><strong>Volume</strong> – 0 to 100 (in the Advanced tab).</li>
+    </ul>
+    <p>To start reading, press <code>Ctrl+R</code> or click the <strong>Read</strong> button. The button label changes to <strong>Stop</strong>; press again to stop. When playback finishes, the reader stops automatically. Use <strong>Voice Preview</strong> from the Tools menu to hear a short sample.</p>
+    <p>Audiobook export (MP3) also respects these TTS settings; chunking can be enabled for large documents in the Advanced settings tab.</p>
+
+    <h2 id="export">Exporting Documents</h2>
+    <p>To export content, press the Export button or <code>Ctrl+Shift+E</code>. In the dialog:</p>
+    <ul>
+        <li><strong>Format</strong> – TXT, DOCX, MP3 Audiobook, CSV (tables), JSON, HTML.</li>
+        <li><strong>Scope</strong> – current page, entire PDF, or tagged pages.</li>
+        <li><strong>Options</strong> – include notes, include OCR text.</li>
+    </ul>
+    <p>After selecting a save location, a progress indicator shows the export status. For DOCX, the <code>python-docx</code> library is required. For CSV, <code>pdfplumber</code> and <code>pandas</code> are needed; the export extracts tables from the selected pages.</p>
+
+    <h2 id="settings">Settings Dialog</h2>
+    <p>All preferences are stored automatically. The dialog has three tabs:</p>
+    <ul>
+        <li><strong>General</strong> – zoom level, font size, high contrast, invert colors, auto‑scroll speed, default extraction profile.</li>
+        <li><strong>Text‑to‑Speech</strong> – voice selection (with fetch button), speed, pitch.</li>
+        <li><strong>Advanced</strong> – default export directory, TTS volume (0‑100), TTS chunking on/off.</li>
+    </ul>
+    <p>After pressing OK, settings are applied immediately and saved.</p>
+
+    <h2 id="shortcuts">Keyboard Shortcuts</h2>
+    <table class="shortcut-table">
+        <tr><th>Shortcut</th><th>Action</th></tr>
+        <tr><td><code>NVDA+Alt+P</code></td><td>Open PDF Reader main dialog</td></tr>
+        <tr><td><code>Ctrl+I</code></td><td>Import PDF</td></tr>
+        <tr><td><code>Ctrl+W</code></td><td>Close PDF Reader Panel</td></tr>
+        <tr><td><code>Ctrl+F</code></td><td>Search</td></tr>
+        <tr><td><code>F3</code></td><td>Find next search result</td></tr>
+        <tr><td><code>Shift+F3</code></td><td>Find previous search result</td></tr>
+        <tr><td><code>Ctrl+C</code></td><td>Copy current page text (or selection)</td></tr>
+        <tr><td><code>Ctrl+Shift+C</code></td><td>Copy all pages text</td></tr>
+        <tr><td><code>Ctrl+Plus</code></td><td>Zoom in</td></tr>
+        <tr><td><code>Ctrl+Minus</code></td><td>Zoom out</td></tr>
+        <tr><td><code>Ctrl+0</code></td><td>Reset zoom</td></tr>
+        <tr><td><code>Ctrl+H</code></td><td>Toggle high contrast</td></tr>
+        <tr><td><code>Ctrl+Shift+I</code></td><td>Toggle colour inversion</td></tr>
+        <tr><td><code>Ctrl+Shift+V</code></td><td>Toggle split view</td></tr>
+        <tr><td><code>Ctrl+Shift+O</code></td><td>OCR</td></tr>
+        <tr><td><code>Ctrl+Shift+P</code></td><td>Change extraction profile</td></tr>
+        <tr><td><code>Ctrl+R</code></td><td>Read aloud / Stop</td></tr>
+        <tr><td><code>Ctrl+Shift+A</code></td><td>Auto‑scroll on/off</td></tr>
+        <tr><td><code>Ctrl+Shift+C</code></td><td>Compare pages</td></tr>
+        <tr><td><code>Ctrl+Shift+S</code></td><td>Document statistics</td></tr>
+        <tr><td><code>Ctrl+B</code></td><td>Add bookmark</td></tr>
+        <tr><td><code>Ctrl+Shift+B</code></td><td>Bookmarks manager</td></tr>
+        <tr><td><code>Ctrl+T</code></td><td>Table of contents</td></tr>
+        <tr><td><code>Ctrl+Shift+N</code></td><td>View annotations</td></tr>
+        <tr><td><code>Ctrl+Shift+H</code></td><td>View highlights</td></tr>
+        <tr><td><code>Ctrl+G</code></td><td>Go to page</td></tr>
+        <tr><td><code>Alt+PageUp</code></td><td>Previous page</td></tr>
+        <tr><td><code>Alt+PageDown</code></td><td>Next page</td></tr>
+        <tr><td><code>Ctrl+Shift+E</code></td><td>Export dialog</td></tr>
+        <tr><td><code>Ctrl+M</code></td><td>PDF properties</td></tr>
+        <tr><td><code>Ctrl+Shift+M</code></td><td>Menu Navigator</td></tr>
+        <tr><td><code>Ctrl+Shift+L</code></td><td>Highlight selection</td></tr>
+        <tr><td><code>Ctrl+Shift+T</code></td><td>Translate page</td></tr>
+        <tr><td><code>F1</code></td><td>Open help (shortcuts list)</td></tr>
+        <tr><td><code>Ctrl+F1</code></td><td>About dialog</td></tr>
+    </table>
+
+    <h2 id="support">Support and Community</h2>
+    <p>For questions, feedback, or assistance:</p>
+    <ul>
+        <li>Use the <strong>Help</strong> dialog (<code>F1</code>) inside the reader for a full shortcuts reference.</li>
+        <li>Join the Telegram channel <strong>Blind Tech Nexus</strong> at <a href="https://t.me/blindtechvisionary" target="_blank">https://t.me/blindtechvisionary</a> to connect with other users and the developer.</li>
+    </ul>
+    <p>Your suggestions help shape future updates. Please share your experience and report any issues through the channel.</p>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>This add‑on operates entirely offline. No document content, personal data, or usage statistics are collected or transmitted. Voice list fetching connects to Microsoft servers only when you explicitly press the <strong>Fetch Latest Voices</strong> button. All PDF processing, OCR, and TTS audio generation occur locally on your computer.</p>
+
+    <div class="note">
+        <strong>Note:</strong> The add‑on bundles several open‑source libraries. If your security software blocks these components, please allow the add‑on’s folder or the specific DLL/executable files. The OCR feature depends on a working Tesseract installation; if the automatic detection fails, you can manually locate the <code>tesseract.exe</code> file.
+    </div>
+    <p style="text-align: center; margin-top: 40px; color: #666;">NVDA PDF Reader Add‑on – Version 0.1.0 – Built for accessibility.</p>
+</body>
+</html>
